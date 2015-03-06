@@ -1,0 +1,157 @@
+body{ background:#fff;}
+div,ul,li,ol,a{ list-style:none; margin:0; padding:0;}
+#ulpic{width:100%; max-width:252px; float:left;  margin:0 auto;   }
+#ulpic li{width:80px;height: 80px;float:left; margin-right:4px;  margin-top:4px; }
+#ulpic li  img { width:80px;height:80px;}
+
+/*Plugin Style*/
+#galleryOverlay{
+	width:100%;
+	height:100%;
+	position:fixed;
+	top:0;
+	left:0;
+	opacity:0;
+	z-index:100000;
+	background-color:#222;
+	background-color:rgba(0,0,0,0.8);
+	overflow:hidden;
+	display:none;
+	-moz-transition:opacity 1s ease;
+	-webkit-transition:opacity 1s ease;
+	transition:opacity 1s ease;
+}
+#galleryOverlay.visible{
+	opacity:1;
+ 
+
+}
+ #sliderHolder{
+	
+	height:100%;
+	left:0;
+	top:0;
+	width:100%;
+	white-space: nowrap;
+	position:absolute;
+	-moz-transition:left 0.4s ease;
+	-webkit-transition:left 0.4s ease;
+	transition:left 0.4s ease;
+}
+#galleryOverlay .imageContainer{
+	 background: url("../images/loader.gif") no-repeat center center;
+	/*text-align: center;
+	width:100%;
+	height:100%;
+	display: inline-block;*/
+	height: 100%;
+	line-height: 1px;
+	text-align: center;
+	width:100%;
+	display:inline-block;
+}
+ 
+#sliderHolder .imageContainer:before{
+	content: "";
+	display: inline-block;
+	height: 50%;
+	
+	
+}
+#galleryOverlay .imageContainer img{
+	/*display: inline-block;
+	max-width:80%;
+	max-height:80%;
+	width:auto !important;
+	vertical-align:central;*/
+		display: inline-block;
+	max-height: 80%;
+	max-width: 80%;
+	width: auto !important;
+	vertical-align: middle;
+	-webkit-transform-origin: 0 0;
+	transform-origin: 0 0;
+	position:relative;
+}
+
+
+#sliderHolder.rightEnd{
+	animation:rightEnd 0.3s;
+	-moz-animation: rightEnd 0.3s;
+	-webkit-animation: rightEnd 0.3s;
+	
+}
+
+#sliderHolder.leftEnd{
+	animation:leftEnd 0.3s;
+	-moz-animation: leftEnd 0.3s;
+	-webkit-animation: leftEnd 0.3s;
+}
+@keyframes rightEnd{
+	0%{		margin-left:0px;}
+	50%{	margin-left:-30px;}
+	100%{	margin-left:0px;}	
+}
+@-moz-keyframes rightEnd{
+	0%{		margin-left:0px;}
+	50%{	margin-left:-30px;}
+	100%{	margin-left:0px;}
+}
+@keyframes leftEnd{
+	0%{		margin-left:0px;}
+	50%{	margin-left:30px;}
+	100%{	margin-left:0px;}
+}
+@-moz-keyframes leftEnd{
+	0%{		margin-left:0px;}
+	50%{	margin-left:30px;}
+	100%{	margin-left:0px;}
+}
+
+@-webkit-keyframes rightEnd{
+	0%{		margin-left:0px;}
+	50%{	margin-left:-30px;}
+	100%{	margin-left:0px;}
+}
+
+@-webkit-keyframes leftEnd{
+	0%{		margin-left:0px;}
+	50%{	margin-left:30px;}
+	100%{	margin-left:0px;}
+}
+
+/* Arrows */
+
+#prevArrow,#nextArrow{
+	border:none;
+	text-decoration:none;
+	background:url('../images/arrowws.png') no-repeat;
+	opacity:0.5;
+	cursor:pointer;
+	position:absolute;
+	width:43px;
+	height:58px;
+	
+	top:50%;
+	margin-top:-29px;
+	
+	-moz-transition:opacity 0.2s ease;
+	-webkit-transition:opacity 0.2s ease;
+	transition:opacity 0.2s ease;
+}
+
+
+#prevArrow:hover, #nextArrow:hover{
+	opacity:1;
+}
+
+#prevArrow{
+	background-position:left top;
+	left:40px;
+}
+
+#nextArrow{
+	background-position:right top;
+	right:40px;
+}
+ 

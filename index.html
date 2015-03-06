@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, user-scalable=no">
+ 
+<title>无标题文档</title>
+<link href="css/style.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="js/jquery.js"></script>
+ <script type="text/javascript" src="js/CSwipe.js?v=19"></script>
+ <script type="text/javascript" src="js/hammer.js"></script>
+ <script type="text/javascript"   src="js/jquery.hammer.js"></script>
+
+</head>
+
+<body>
+<ul id="ulpic">
+  <li><a  class="carditem" href="images/bbig1.jpg"><img src="images/img1.jpg" alt=""></a> </li>
+  <li><a class="carditem" href="images/bbig22.jpg"> <img src="images/img2.jpg" alt=""> </a> </li>
+  <li><a class="carditem" href="images/bbig32.jpg"> <img src="images/img3.jpg" alt=""> </a> </li>
+  <li><a class="carditem" href="images/bbig42.jpg"><img  src="images/img4.jpg" alt=""></a> </li>
+  <li><a class="carditem" href="images/bbig52.jpg"> <img src="images/img5.jpg" alt=""> </a> </li>
+  <li><a class="carditem" href="images/bbig6.jpg"> <img src="images/img6.jpg" alt=""> </a> </li>
+</ul>
+ 
+<script type="text/javascript">
+$(function(){
+	$("#ulpic .carditem").cswipe();	
+ 
+});
+</script>
+</body>
+</html>
